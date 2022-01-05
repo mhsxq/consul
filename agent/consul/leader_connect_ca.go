@@ -297,7 +297,6 @@ func newCARoot(pemValue, provider, clusterID string) (*structs.CARoot, error) {
 	}
 
 	// TODO: some test cases with different lengths of certs
-	// TODO: make sure test cases look at all fields.
 	for i := 0; i < len(certs)-1; i++ {
 		pem, err := connect.PEMEncode(certs[i], "CERTIFICATE")
 		if err != nil {
